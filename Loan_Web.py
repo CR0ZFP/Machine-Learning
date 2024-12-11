@@ -3,14 +3,14 @@ import joblib
 import numpy as np
 import pandas as pd
 
-mainmodel = joblib.load("./Loan_Xgb.joblib")
-supportmodel = joblib.load("./Loan_grade_XGB.joblib")
+mainmodel = joblib.load("./joblibs/Loan_Xgb.joblib")
+supportmodel = joblib.load("./joblibs/Loan_grade_XGB.joblib")
 
-lb_loan_intent = joblib.load("./lb_loan_intent.joblib")
-lb_home_owner = joblib.load("./lb_home_owner.joblib")
-lb_loan_grade = joblib.load("./lb_loan_grade.joblib")
+lb_loan_intent = joblib.load("./joblibs/lb_loan_intent.joblib")
+lb_home_owner = joblib.load("./joblibs/lb_home_owner.joblib")
+lb_loan_grade = joblib.load("./joblibs/lb_loan_grade.joblib")
 
-sc = joblib.load("./scaler.joblib")
+sc = joblib.load("./joblibs/scaler.joblib")
 
 
 st.title ("Loan approval prediction")
