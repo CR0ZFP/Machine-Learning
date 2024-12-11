@@ -17,12 +17,12 @@ st.title ("Loan approval prediction")
 
 Grade_or_Not = st.selectbox("Loan Grade determination",["Input manually", "Use grade prediction"])
 
-age = st.slider("Set your age:", 18, 100)
-income = st.number_input("Please give your yearly income:", min_value=0, value=0)
+age = st.slider("Set your age:", min_value=18, value=18, max_value=100)
+income = st.number_input("Please give your yearly income:", min_value=0, value=0, max_value=200000)
 
 ownership = st.selectbox("What is the type of your home ownership: ",["RENT","MORTGAGE","OWN","OTHER"])
 
-employment_length = st.number_input("What is the lenght of your employment (years):", min_value=0,)
+employment_length = st.number_input("What is the lenght of your employment (years):", min_value=0, max_value=age)
 
 intent = st.selectbox("From what intent do you want to acquire the loan:", ["MEDICAL","EDUCATION","PERSONAL","DEBTCONSOLIDATION","HOMEIMPROVEMENT","VENTURE"])
 
@@ -39,7 +39,7 @@ else:
 default = st.selectbox ("Have you ever defaulted on a loan?", ["Y","N"])
 
 
-credit_length = st.number_input("What is your credit history length:", min_value=0)
+credit_length = st.number_input("What is your credit history length:", min_value=0, max_value=age)
 
 
 
