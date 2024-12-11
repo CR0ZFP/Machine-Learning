@@ -3,14 +3,14 @@ import joblib
 import numpy as np
 import pandas as pd
 
-mainmodel = joblib.load(r"C:\Users\Dogo\Documents\Machine Learning\Loan approval prediction\joblibs\Loan_Xgb.joblib")
-supportmodel = joblib.load(r"C:\Users\Dogo\Documents\Machine Learning\Loan approval prediction\joblibs\Loan_grade_XGB.joblib")
+mainmodel = joblib.load("./Loan_Xgb.joblib")
+supportmodel = joblib.load("./Loan_grade_XGB.joblib")
 
-lb_loan_intent = joblib.load(r"C:\Users\Dogo\Documents\Machine Learning\Loan approval prediction\joblibs\lb_loan_intent.joblib")
-lb_home_owner = joblib.load(r"C:\Users\Dogo\Documents\Machine Learning\Loan approval prediction\joblibs\lb_home_owner.joblib")
-lb_loan_grade = joblib.load(r"C:\Users\Dogo\Documents\Machine Learning\Loan approval prediction\joblibs\lb_loan_grade.joblib")
+lb_loan_intent = joblib.load("./lb_loan_intent.joblib")
+lb_home_owner = joblib.load("./lb_home_owner.joblib")
+lb_loan_grade = joblib.load("./lb_loan_grade.joblib")
 
-sc = joblib.load(r"C:\Users\Dogo\Documents\Machine Learning\Loan approval prediction\joblibs\scaler.joblib")
+sc = joblib.load("./scaler.joblib")
 
 
 st.title ("Loan approval prediction")
