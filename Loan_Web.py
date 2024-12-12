@@ -68,15 +68,16 @@ if st.button("Forcast your loan approval"):
         input_data.insert(5, "loan_grade", loan_grade)
 
     predict = mainmodel.predict(input_data)
-    predict_proba = mainmodel.predict_proba(input_data)[0][1]
+    predict_proba = mainmodel.predict_proba(input_data)
+    approval = predict_proba[0][1]
 
     loan_grade = lb_loan_grade.inverse_transform(loan_grade)
 
     st.write(f"Your loan grade : {loan_grade}")
     if (predict==0):
         st.write("Unfortunately you won't be egligable for loan. Please contact your bank for further information or reconcideration!")
-        st.write(f"Your chanses of getting the loan is: {predict_proba}")
+        st.write(f"Your chances of getting the loan is: {approval*100:.2f%}")
     else:
         st.write("Congratulations, you will be egligable for loan! Please contact your bank for further information")
-        st.write(f"Your chanses of getting the loan is: {predict_proba}")
+        st.write(f"Your chances of getting the loan is: {approval*100:.2f%}")
 
