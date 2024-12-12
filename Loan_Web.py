@@ -27,7 +27,7 @@ employment_length = st.number_input("What is the lenght of your employment (year
 intent = st.selectbox("From what intent do you want to acquire the loan:", ["MEDICAL","EDUCATION","PERSONAL","DEBTCONSOLIDATION","HOMEIMPROVEMENT","VENTURE"])
 
 
-loan_ammount = st.slider("What is the loan amount that you require:", 500, 50000)
+loan_ammount = st.slider("What is the loan amount that you require:", 500, 50000,step=100)
 intrest_rate = st.slider ("Please select the intrestrate that our consultants initialy given:", 2.0,20.0, step=0.01)
 
 if (Grade_or_Not == "Input manually"):
