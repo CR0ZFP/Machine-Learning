@@ -76,7 +76,7 @@ if st.button("Forcast your loan approval"):
     st.write(f"Your loan grade : {loan_grade}")
     if (predict==0):
         st.write("Unfortunately you won't be egligable for loan. Please contact your bank for further information or reconcideration!")
-        st.write(f"Your chances of getting the loan is: {approval*100:.2f%}")
+        st.write(f"Your chances of getting the loan is: {approval*100:.2f}%")
     else:
         st.write("Congratulations, you will be egligable for loan! Please contact your bank for further information")
         st.write(f"Your chances of getting the loan is: {approval*100:.2f}%")
